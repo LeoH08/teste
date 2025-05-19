@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetores capitalizados</title>
+</head>
+<body>
+    <script>
+        var ingredientes = ['farinha',
+         'agua',
+          'sal',
+           'manteiga',
+            'acucar'
+        ];
+        // Capitaliza os ingredientes
+        for (var i = 0; i < ingredientes.length; i++) {
+            var letraIcinicial = ingredientes[i].charAt(0).toUpperCase();
+            var restotexto = ingredientes[i].slice(1);
+            ingredientes[i] = letraIcinicial + restotexto;
+        }
+
+        // Ordena os ingredientes
+        var ordenado = ingredientes.sort(function(a, b) {
+            return a.localeCompare(b);
+        });
+
+        console.log("Ingredientes ordenados e capitalizados:", ordenado);
+    </script>
+</body>
+</html>

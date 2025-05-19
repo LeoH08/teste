@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modularização e atribuição de responsabilidades</title>
+</head>
+<body>
+    <script>
+        function capitalizar(ingredientes) {
+            let modificado = [];
+            for (let i = 0; i < ingredientes.length; i++) {
+                let letraInicial = ingredientes[i].charAt(0).toUpperCase();
+                let resto = ingredientes[i].slice(1);
+                let resultado = letraInicial + resto;
+                modificado[i] = resultado;
+            }
+            return modificado;
+        }
+        
+        function ordenar(ingredientes) {
+            return ingredientes.slice().sort();
+        }
+        let ingredientes = ["tomate", "alface", "cebola"];
+        let ingredientesCapitalizados = capitalizar(ingredientes);
+        let ingredientesOrdenados = ordenar(ingredientesCapitalizados);
+
+        console.log("Capitalizados:", ingredientesCapitalizados);
+        console.log("Ordenados:", ingredientesOrdenados);
+    </script>
+</body>
+</html>
